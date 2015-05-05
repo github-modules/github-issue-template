@@ -1,0 +1,15 @@
+{
+  "name": "github-issue-template",
+  "version": "1.0.0",
+  "description": "A CLI for generating URLs to pre-filled GitHub issue forms",
+  "main": "index.js",
+  "bin": "index.js",
+  "author": "Zeke Sikelianos <zeke@sikelianos.com> (http://zeke.sikelianos.com/)",
+  "license": "MIT",
+  "preferglobal": true,
+  "dependencies": {
+    "is-url": "^1.2.0",
+    "open": "0.0.5",
+    "yargs": "^3.8.0"
+  }
+}
