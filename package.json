@@ -7,6 +7,7 @@
   "author": "Zeke Sikelianos <zeke@sikelianos.com> (http://zeke.sikelianos.com/)",
   "license": "MIT",
   "preferglobal": true,
+  "repistory": "https://github.com/zeke/github-issue-template",
   "dependencies": {
     "is-url": "^1.2.0",
     "open": "0.0.5",
