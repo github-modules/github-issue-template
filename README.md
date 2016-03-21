@@ -2,21 +2,19 @@
 
 A CLI for generating URLs to pre-filled GitHub issue forms
 
+GitHub has a little-known feature that allows you to pass query params to the `/issues/new` page. Those query params can specify values to inject into the issue form's title and body inputs.
+
 ## Installation
 
-Download node at [nodejs.org](http://nodejs.org) and install it, if you haven't already.
-
 ```sh
-npm install github-issue-template --save
+npm i -g github-issue-template
 ```
 
 ## Usage
 
 ```sh
 github-issue-template --repo sally/project --title new thing --body path/to/body.md
-
 ```
-
 
 ## Dependencies
 
