@@ -9,21 +9,21 @@ const argv = require('yargs').argv
 
 if (argv.repo && argv.title && argv.body) {
 
-  console.log(path.join(process.cwd(), argv.body))
+  const bodyFile = (path.isAbsolute(argv.body))
+    ? argv.body
+    : path.resolve(process.cwd(), argv.body)
 
-  var issueURL = url.format({
+  const issueURL = url.format({
     protocol: 'https',
     host: 'github.com',
     pathname: `${argv.repo}/issues/new`,
     query: {
       title: argv.title,
-      body: fs.readFileSync(path.join(process.cwd(), argv.body), 'utf8')
+      body: fs.readFileSync(bodyFile, 'utf8')
     }
   })
   process.stdout.write(issueURL)
-  if (isUrl(issueURL)){
-    open(issueURL)
-  }
+  if (isUrl(issueURL)) open(issueURL)
   process.exit()
 }
 
