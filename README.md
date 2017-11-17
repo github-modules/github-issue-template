@@ -12,8 +12,20 @@ npm i -g github-issue-template
 
 ## Usage
 
+The CLI expects three arguments:
+
+- `repo`
+- `title`
+- `body`
+
 ```sh
-github-issue-template --repo sally/project --title new thing --body path/to/body.md
+github-issue-template --repo sally/project --title "new thing" --body "the body"
+```
+
+If you want to use a file on disk as the body, `cat` comes to the rescue:
+
+```sh
+github-issue-template --repo sally/project --title "new thing" --body "$(cat some/file.md)"
 ```
 
 ## Dependencies
